@@ -712,11 +712,13 @@ cc.loader = (function () {
          * @param {function} [cb]
          */
         loadJsWithImg: function (baseDir, jsList, cb) {
-            var self = this, jsLoadingImg = self._loadJsImg(),
+            var self = this,
+                // jsLoadingImg = self._loadJsImg(),
                 args = self._getArgs4Js(arguments);
+
             this.loadJs(args[0], args[1], function (err) {
                 if (err) throw new Error(err);
-                jsLoadingImg.parentNode.removeChild(jsLoadingImg);//remove loading gif
+                // jsLoadingImg.parentNode.removeChild(jsLoadingImg);//remove loading gif
                 if (args[2]) args[2]();
             });
         },
@@ -797,6 +799,7 @@ cc.loader = (function () {
                 } else {
                     if (xhr.overrideMimeType) xhr.overrideMimeType("text\/plain; charset=utf-8");
                     xhr.onload = function () {
+                        xhr.onload = xhr.onerror = null;
                         if(xhr.readyState === 4)
                             xhr.status === 200 ? cb(null, xhr.responseText) : cb({status:xhr.status, errorMessage:errInfo}, null);
                     };

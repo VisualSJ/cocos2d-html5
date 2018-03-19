@@ -229,6 +229,14 @@ cc.LabelTTF._firsrEnglish = /^[a-zA-Z0-9ÄÖÜäöüßéèçàùêâîôû]/;
             }
             OffsetYArray.push(yOffset);
         }
+        if (window.BK) {
+            for(var i = 0; i < OffsetYArray.length; i++){
+                OffsetYArray[i] += dy;
+            }
+            xOffset = xOffset + dx;
+            dx = dy = 0;
+        }
+
         var tmpStatus = {
             contextTransform:cc.p(dx,dy),
             xOffset:xOffset,

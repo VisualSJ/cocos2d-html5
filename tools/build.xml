@@ -5,7 +5,7 @@
              classpath="./compiler/compiler.jar"/>
     <target name="compile">
         <jscomp compilationLevel="simple" warning="quiet"
-                debug="false" output="./../lib/cocos2d-js-v3.13-min.js"
+                debug="true" output="./../lib/cocos2d-js-v3.13-min.js"
                 languageIn="ECMASCRIPT5"
                 sourceMapOutputFile="./../lib/cocos2d-js-v3.13-sourcemap" sourceMapFormat="V3">
             <sources dir="./../">
@@ -75,13 +75,13 @@
                 <file name="cocos2d/core/sprites/CCSpriteFrame.js"/>
                 <file name="cocos2d/core/sprites/CCSpriteFrameCache.js"/>
                 <file name="cocos2d/core/sprites/CCSpriteBatchNode.js"/>
-                <file name="cocos2d/core/sprites/CCSpriteBatchNodeCanvasRenderCmd.js"/>
-                <file name="cocos2d/core/sprites/CCSpriteBatchNodeWebGLRenderCmd.js"/>
+                <!-- <file name="cocos2d/core/sprites/CCSpriteBatchNodeCanvasRenderCmd.js"/> -->
+                <!-- <file name="cocos2d/core/sprites/CCSpriteBatchNodeWebGLRenderCmd.js"/> -->
                 <file name="cocos2d/core/CCConfiguration.js"/>
                 <file name="cocos2d/core/CCDirector.js"/>
                 <file name="cocos2d/core/CCDirectorCanvas.js"/>
                 <file name="cocos2d/core/CCDirectorWebGL.js"/>
-                <file name="cocos2d/core/CCCamera.js"/>
+                <!-- <file name="cocos2d/core/CCCamera.js"/> -->
                 <file name="cocos2d/core/CCScheduler.js"/>
                 <file name="cocos2d/core/utils/CCProfiler.js"/>
                 <file name="cocos2d/core/CCDrawingPrimitivesCanvas.js"/>
@@ -131,7 +131,7 @@
                 <file name="cocos2d/actions/CCAction.js"/>
                 <file name="cocos2d/actions/CCActionInterval.js"/>
                 <file name="cocos2d/actions/CCActionInstant.js"/>
-                <file name="cocos2d/actions/CCActionCamera.js"/>
+                <!-- <file name="cocos2d/actions/CCActionCamera.js"/> -->
                 <file name="cocos2d/actions/CCActionEase.js"/>
                 <file name="cocos2d/actions/CCActionCatmullRom.js"/>
                 <file name="cocos2d/actions/CCActionTween.js"/>

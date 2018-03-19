@@ -382,6 +382,15 @@ cc.IMEDispatcher = cc.Class.extend(/**  @lends cc.imeDispatcher# */{
     },
 
     _focusDomInput:function (delegate) {
+        if (window.BK) {
+            var self = this;
+            window["BK"]["Editor"]["showKeyBoard"](function (text) {
+                delegate.setString(text);
+            }, function bkTextChange (text) {
+                delegate.setString(text);
+            });
+            return;
+        }
         if(cc.sys.isMobile){
             this.impl._delegateWithIme = delegate;
             delegate.didAttachWithIME();

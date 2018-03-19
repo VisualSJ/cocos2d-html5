@@ -369,6 +369,7 @@ return {
         }
         this._batchRendering();
         _batchedInfo.texture = null;
+        gl.glCommit && gl.glCommit();
     }
 };
 })();

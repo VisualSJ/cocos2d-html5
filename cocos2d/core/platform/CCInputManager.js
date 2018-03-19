@@ -226,6 +226,14 @@ cc.inputManager = /** @lends cc.inputManager# */{
      * @return {Object}
      */
     getHTMLElementPosition: function (element) {
+        if (window.BK) {
+            return {
+                left: 0,
+                top: 0,
+                width: element ? element.width : 0,
+                height: element ? element.height : 0,
+            };
+        }
         var docElem = document.documentElement;
         var win = window;
         var box = null;
